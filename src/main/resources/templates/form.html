@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #FECDD7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #f06292;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ec407a;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Input Mahasiswa</h2>
+
+    <form action="/add" method="post">
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>NIM:</label>
+        <input type="text" name="nim" required>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" name="jenisKelamin" value="Laki-laki" required> Laki-laki<br>
+        <input type="radio" name="jenisKelamin" value="Perempuan" required> Perempuan<br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="/home">← Kembali ke Home</a>
+</div>
+
+</body>
+</html>
